@@ -1,9 +1,10 @@
-
-
-module.exports = function towelSort (matrix) {
+module.exports = function towelSort(matrix) {
     let arr = [];
-    for (i = 0; i < matrix.length; i++) {
-        arr=i%2==0?arr.concat(matrix[i]):arr.concat(matrix[i].reverse());
+    if (matrix) {
+        for (i = 0; i < matrix.length; i++) {
+            arr = i % 2 == 0 ? arr.concat(matrix[i]): arr.concat(matrix[i].reverse());
+        }
+        return arr;
     }
-    return arr;
-}
+    else return arr;
+};
